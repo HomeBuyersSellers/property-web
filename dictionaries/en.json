@@ -1,0 +1,74 @@
+{
+    "Homepage": {
+        "helloWorld": "Hello World !",
+        "header": {
+            "brandLogo": {
+                "title": "Property Web",
+                "logo": {
+                    "image": "",
+                    "alt": ""
+                }
+            },
+            "primary_navigation": [
+                {
+                    "Link Title": "rent",
+                    "Hyperlink": {
+                        "url": "/rent",
+                        "target": ""
+                    }
+                },
+                {
+                    "Link Title": "buy",
+                    "Hyperlink": {
+                        "url": "/buy",
+                        "target": ""
+                    }
+                },
+                {
+                    "Link Title": "sell",
+                    "Hyperlink": {
+                        "url": "/sell",
+                        "target": ""
+                    }
+                },
+                {
+                    "Link Title": "rent",
+                    "Hyperlink": {
+                        "url": "/rent",
+                        "target": ""
+                    }
+                },
+                {
+                    "Link Title": "manage properties ",
+                    "Hyperlink": {
+                        "url": "/manage-properties",
+                        "target": ""
+                    }
+                }
+            ],
+            "secondary_navigation": [
+                {
+                    "Link Title": "login",
+                    "Hyperlink": {
+                        "url": "/login",
+                        "target": ""
+                    }
+                },
+                {
+                    "Link Title": "sign up",
+                    "Hyperlink": {
+                        "url": "/sign-up",
+                        "target": ""
+                    }
+                }
+            ]
+        }
+    },
+    "AboutPage": {
+        "aboutText": "This is a fully translated static website"
+    },
+    "Header": {
+        "home": "Home",
+        "about": "About"
+    }
+}

@@ -1,12 +1,12 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode:true,
-    i18n: {
-        locales: ['default', 'en', 'ar'],
-        defaultLocale: 'default',
-        localeDetection: false,
-      },
-      trailingSlash: true,
-}
+  reactStrictMode: true,
+  skipTrailingSlashRedirect: true,
+};
+const withNextIntl = require('next-intl/plugin')(
+  // This is the default (also the `src` folder is supported out of the box)
+  './i18n.js'
+);
 
-module.exports = nextConfig
+module.exports = withNextIntl(nextConfig);

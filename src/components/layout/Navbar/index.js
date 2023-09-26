@@ -23,12 +23,12 @@ const Navbar = ({ data }) => {
           <div className="flex items-center space-x-4">
             <a
               href="/"
-              className="text-gray-700 hover:text-primary-color font-semibold capitalize"
+              className="text-gray-700 hover:text-primary-color font-semibold capitalize flex items-center"
             >
               {!brandLogoImage ? 
                 <Image src={brandLogoImage.image} alt={brandLogoImage.alt}/> :
                 <>
-                <i class="ri-community-line flex items-center text-xl text-primary-color mx-2"></i> 
+                <i class="ri-community-line  text-xl text-primary-color mx-1"></i> 
                 {brandLogoTitle}
                  </>
               }

@@ -1,6 +1,10 @@
 {
     "Homepage": {
         "helloWorld": "Hello World !",
+        "pageMeta":{
+            "title":"Welcome to Our Real Estate Wonderland",
+            "description":"Discover your dream home with us. Explore a wide range of properties, from cozy apartments to luxurious estates, and find your perfect match."
+        },
         "header": {
             "brandLogo": {
                 "title": "Property Web",
@@ -32,16 +36,16 @@
                     }
                 },
                 {
-                    "Link Title": "rent",
+                    "Link Title": "manage properties ",
                     "Hyperlink": {
-                        "url": "/rent",
+                        "url": "/manage-properties",
                         "target": ""
                     }
                 },
                 {
-                    "Link Title": "manage properties ",
+                    "Link Title": "Book Rider",
                     "Hyperlink": {
-                        "url": "/manage-properties",
+                        "url": "/book-rider",
                         "target": ""
                     }
                 }
@@ -63,12 +67,5 @@
                 }
             ]
         }
-    },
-    "AboutPage": {
-        "aboutText": "This is a fully translated static website"
-    },
-    "Header": {
-        "home": "Home",
-        "about": "About"
     }
 }

@@ -1,12 +1,68 @@
 {
     "Homepage": {
-        "helloWorld": "مرحبًا بالعالم !"
-    },
-    "AboutPage": {
-        "aboutText": "هذا موقع ويب ثابت مترجم بالكامل"
-    },
-    "Header": {
-        "home": "الصفحة الرئيسية",
-        "about": "حول"
+      "helloWorld": "مرحبًا بك في العالم!",
+      "header": {
+        "brandLogo": {
+          "title": "ويب العقارات",
+          "logo": {
+            "image": "",
+            "alt": ""
+          }
+        },
+        "primary_navigation": [
+          {
+            "Link Title": "الإيجار",
+            "Hyperlink": {
+              "url": "/الإيجار",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "الشراء",
+            "Hyperlink": {
+              "url": "/الشراء",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "البيع",
+            "Hyperlink": {
+              "url": "/البيع",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "الإيجار",
+            "Hyperlink": {
+              "url": "/الإيجار",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "إدارة العقارات",
+            "Hyperlink": {
+              "url": "/إدارة-العقارات",
+              "target": ""
+            }
+          }
+        ],
+        "secondary_navigation": [
+          {
+            "Link Title": "تسجيل الدخول",
+            "Hyperlink": {
+              "url": "/تسجيل-الدخول",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "سجل",
+            "Hyperlink": {
+              "url": "/سجل",
+              "target": ""
+            }
+          }
+        ]
+      }
     }
-}
+  }
+  

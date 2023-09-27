@@ -38,7 +38,7 @@ function LocaleLayoutComponent({ children, locale, messages }) {
       <body suppressHydrationWarning={true}>
         <ReduxProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <Layout header={messages.Homepage.header}>{children}</Layout>
+            <Layout header={messages.Homepage.header} footer={messages.Homepage.footer}>{children}</Layout>
           </NextIntlClientProvider>
         </ReduxProvider>
       </body>

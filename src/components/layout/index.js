@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import { useEffect } from "react";
 
 
-const Layout = ({ children, header }) => {
+const Layout = ({ children, header,footer }) => {
   useEffect(() => {
     // Get the Navbar element by its id
     const navbar = document.getElementById("navbar");
@@ -19,11 +19,9 @@ const Layout = ({ children, header }) => {
     <>
       <Navbar data={header} />
       <main className="flex min-h-screen flex-col items-center justify-between ">
-        <div className="layout">
           {children}
-        </div>
       </main>
-      <Footer />
+      <Footer data={footer} />
     </>
   );
 };

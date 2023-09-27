@@ -1,78 +1,69 @@
-import React from 'react'
-import Link from 'next-intl/link';
-
-const Grid = () => {  
+import React from "react";
+import Link from "next-intl/link";
+const Grid = ({ data }) => {
   return (
-    <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-    <a
-      href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <h2 className={`mb-3 text-2xl font-semibold`}>
-        Docs{' '}
-        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-          -&gt;
-        </span>
-      </h2>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-        Find in-depth information about Next.js features and API.
-      </p>
-    </a>
+    <div className="container my-12 mx-auto px-4 md:px-12">
+      <div className="flex flex-wrap -mx-1 lg:-mx-4">
+        {data.properties.length > 0 &&
+          data.properties.map((val) => (
+            <div
+              key={val.propertyName}
+              id={val.propertyName.split(" ").join("-")}
+              className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 "
+            >
+              <Link href="#">
+                <article
+                  className={`overflow-hidden rounded-lg shadow-lg bg-white relative  bg-cover bg-no-repeat`}
+                >
+                  <div className="image-box relative overflow-hidden md:w-full">
+                    <img
+                      alt="Placeholder"
+                      className="h-[240px] w-full block transition duration-500 scale-100 hover:scale-110"
+                      src={val.image}
+                    />
+                  </div>
+                  <div className="card-content relative  p-2 md:p-4">
+                    <div className="wishlist">
+                    <div className="w-12 h-12 rounded-full bg-transparent border border-neutral-400 flex items-center justify-center absolute top-5 right-5 hover:bg-primary-color hover:text-white transition duration-300 ease-in-out">
+                    <i className="ri-heart-line text-primary-color text-lg hover:text-white"></i>
+                  </div>
+                  
+                  
+                    </div>
+                    <h1 className="text-lg text-primary-color font-medium">
+                      {val.additionalDetails.price}{" "}
+                      <span className="text-neutral-400 text-sm">/month</span>
+                    </h1>
+                    <div className="flex items-center justify-between leading-tight mb-2">
+                      <h1 className="text-lg text-black font-medium">
+                        {val.propertyName}
+                      </h1>
+                    </div>
+                    <div className="description mb-2">
+                      <p className="text-slate-500 text-sm">{val.location}</p>
+                    </div>
 
-    <Link
-      href="/resources"
-      locale="en"
-      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-      rel="noopener noreferrer"
-    >
-      <h2 className={`mb-3 text-2xl font-semibold`}>
-        Learn{' '}
-        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-          -&gt;
-        </span>
-      </h2>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-        Learn about Next.js in an interactive course with&nbsp;quizzes!
-      </p>
-    </Link>
+                    <div className="flex items-center justify-between leading-none py-2 md:py-4 border-t border-gray-500">
+                      <div className="flex items-center  text-black space-x-4 w-100 font-medium">
+                        <p className="ml-2 text-xs capitalize">
+                          <i className="ri-hotel-bed-line text-primary-color text-lg"></i> Beds {val.additionalDetails.bedrooms}
+                        </p>
+                        <p className="ml-2 text-xs capitalize">
+                           <i className="ri-home-line"></i> bathrooms {val.additionalDetails.bathrooms}
+                        </p>
+                        <p className="ml-2 text-xs capitalize">
+                           <i className="ri-home-line"></i> Area {val.additionalDetails.area}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            </div>
+          ))}
+      </div>
+    </div>
+  );
+};
 
-    <a
-      href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <h2 className={`mb-3 text-2xl font-semibold`}>
-        Templates{' '}
-        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-          -&gt;
-        </span>
-      </h2>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-        Explore the Next.js 13 playground.
-      </p>
-    </a>
-
-    <a
-      href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <h2 className={`mb-3 text-2xl font-semibold`}>
-        Deploy{' '}
-        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-          -&gt;
-        </span>
-      </h2>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-        Instantly deploy your Next.js site to a shareable URL with Vercel.
-      </p>
-    </a>
-  </div>
-  )
-}
-
-export default Grid
+export default Grid;

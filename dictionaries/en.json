@@ -1,9 +1,9 @@
 {
     "Homepage": {
         "helloWorld": "Hello World !",
-        "pageMeta":{
-            "title":"Welcome to Our Real Estate Wonderland",
-            "description":"Discover your dream home with us. Explore a wide range of properties, from cozy apartments to luxurious estates, and find your perfect match."
+        "pageMeta": {
+            "title": "Welcome to Our Real Estate Wonderland",
+            "description": "Discover your dream home with us. Explore a wide range of properties, from cozy apartments to luxurious estates, and find your perfect match."
         },
         "header": {
             "brandLogo": {
@@ -66,6 +66,153 @@
                     }
                 }
             ]
+        },
+        "footer": {
+            "brandLogo": {
+                "title": "Property Web",
+                "logo": {
+                    "image": "",
+                    "alt": ""
+                }
+            },
+            "sellHome": {
+                "title": "Sell a Home",
+                "links": [
+                    {
+                        "Link Title": "Request an Offer",
+                        "Hyperlink": {
+                            "url": "/request-offer",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "Link Title": "Pricing",
+                        "Hyperlink": {
+                            "url": "/pricing",
+                            "target": ""
+                        }
+                    },{
+                        "Link Title": "Reviews",
+                        "Hyperlink": {
+                            "url": "/reviews",
+                            "target": ""
+                        }
+                    }
+                ]
+            },
+            "buyRent": {
+                "title": "Buy,rent and sell",
+                "links": [
+                    {
+                        "Link Title": "buy and sell properties",
+                        "Hyperlink": {
+                            "url": "/buy-sell-properties",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "Link Title": "Rent Home",
+                        "Hyperlink": {
+                            "url": "/rent-home",
+                            "target": ""
+                        }
+                    },{
+                        "Link Title": "Builder trade-up",
+                        "Hyperlink": {
+                            "url": "/builder-trade-up",
+                            "target": ""
+                        }
+                    }
+                ]
+            },
+            "buyHome": {
+                "title": "Buy a Home",
+                "links": [
+                    {
+                        "Link Title": "buy and sell properties",
+                        "Hyperlink": {
+                            "url": "/buy-home",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "Link Title": "finance",
+                        "Hyperlink": {
+                            "url": "/home-finance",
+                            "target": ""
+                        }
+                    }
+                ]
+            },
+            "termsAndPolicy": {
+                "title": "Terms & Policy",
+                "links": [
+                    {
+                        "Link Title": "Trust & safety",
+                        "Hyperlink": {
+                            "url": "/trust-safety",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "Link Title": "terms of service",
+                        "Hyperlink": {
+                            "url": "/terms-of-service",
+                            "target": ""
+                        }
+                    },{
+                        "Link Title": "Privacy Policy",
+                        "Hyperlink": {
+                            "url": "/privacy-policy",
+                            "target": ""
+                        }
+                    }
+                ]
+            },
+            "about": {
+                "title": "About",
+                "links": [
+                    {
+                        "Link Title": "Company",
+                        "Hyperlink": {
+                            "url": "/company",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "Link Title": "how it works",
+                        "Hyperlink": {
+                            "url": "/how-it-works",
+                            "target": ""
+                        }
+                    },{
+                        "Link Title": "Contact",
+                        "Hyperlink": {
+                            "url": "/contact-us",
+                            "target": ""
+                        }
+                    }
+                ]
+            },
+            "quickLinks": {
+                "title": "Resources",
+                "links": [
+                    {
+                        "Link Title": "FAQ",
+                        "Hyperlink": {
+                            "url": "/faq",
+                            "target": ""
+                        }
+                    },
+                    {
+                        "Link Title": "Help Center",
+                        "Hyperlink": {
+                            "url": "/help-center",
+                            "target": ""
+                        }
+                    }
+                ]
+            }
         }
     }
 }

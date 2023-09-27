@@ -3,7 +3,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "components":["./src/components/*"],
-      "dictionaries":["./dictionaries/*"]
+      "dictionaries":["./dictionaries/*"],
     }
   }
 }

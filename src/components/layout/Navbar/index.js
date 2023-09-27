@@ -17,75 +17,119 @@ const Navbar = ({ data }) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white z-20">
-      <nav className="container mx-auto py-4" id="navbar">
-        <div className="flex items-center justify-between px-5">
-          <div className="flex items-center space-x-4">
-            <a
-              href="/"
-              className="text-gray-700 hover:text-primary-color font-semibold capitalize flex items-center"
-            >
-              {!brandLogoImage ? 
-                <Image src={brandLogoImage.image} alt={brandLogoImage.alt}/> :
+    <div className={`sticky shadow-md top-0 bg-white z-20 ${menuOpen ? 'h-screen':''}`}>
+    <nav className="container mx-auto py-4 px-5">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-4">
+          <Link href="/" locale={locale} className="text-gray-700 hover:text-primary-color font-semibold capitalize flex items-center">
+           
+              {brandLogoImage ? (
                 <>
-                <i class="ri-community-line  text-xl text-primary-color mx-1"></i> 
-                {brandLogoTitle}
-                 </>
-              }
-            </a>
+                  <i className="ri-community-line text-xl text-primary-color mx-1"></i>
+                  {brandLogoTitle}
+                </>
+              ) : (
+                brandLogoTitle
+              )}
+          </Link>
+        </div>
 
-            {/* Menu button for mobile */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className={`h-6 w-6 cursor-pointer md:hidden ${
-                menuOpen ? "open" : ""
-              }`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="#000"
-              onClick={toggleMenu}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </div>
-
-          {/* Primary navigation in center */}
-          <div className="flex-1 flex justify-center">
-            <ul className="pt-4 text-base text-gray-700 md:flex md:pt-0 mx-auto">
-              {primaryNavigation.length > 0 &&
-                primaryNavigation.map((val, i) => (
-                  <li key={i}>
-                    <Link
-                      className="text-gray-700 font-medium block py-2 md:p-4 hover:text-primary-color capitalize"
-                      locale={locale}
-                      href={val.Hyperlink.url}
-                      target={val.Hyperlink.target}
-                    >
-                      {val['Link Title']}
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </div>
-
-            <div className="button-group flex space-x-4">
-              {secondaryNavigation.length > 0 &&
-                secondaryNavigation.map((val, i) => (
-                  <Button variant={`${
-                    i === 0 ? 'border border-primary-color text-primary-color hover:bg-primary-color hover:text-white' : 'bg-primary-color hover:bg-transparent hover:text-primary-color hover:border hover:border-primary-color'
-                  }`} key={i}>
-                    {val['Link Title']}
-                  </Button>
-                ))}
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-4">
+          <ul className="text-base text-gray-700 md:flex">
+            {primaryNavigation.length > 0 &&
+              primaryNavigation.map((val, i) => (
+                <li key={i}>
+                  <Link
+                    className="text-gray-700 font-medium py-2 md:p-4 hover:text-primary-color capitalize"
+                    locale={locale}
+                    href={val.Hyperlink.url}
+                    target={val.Hyperlink.target}
+                  >
+                    {val["Link Title"]}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+          <div className="button-group flex space-x-4">
+            {secondaryNavigation.length > 0 &&
+              secondaryNavigation.map((val, i) => (
+                <Button
+                  variant={`${
+                    i === 0
+                      ? "border border-primary-color text-primary-color hover:bg-primary-color hover:text-white"
+                      : "bg-primary-color hover:bg-transparent hover:text-primary-color hover:border hover:border-primary-color"
+                  }`}
+                  key={i}
+                >
+                  {val["Link Title"]}
+                </Button>
+              ))}
           </div>
         </div>
-      </nav>
-    </div>
+
+        {/* Mobile menu toggler */}
+        <div className="md:hidden">
+        <div className="flex items-center space-x-4">
+        <div className="button-group flex space-x-4">
+        {secondaryNavigation.length > 0 &&
+          secondaryNavigation.map((val, i) => (
+            <Button
+              variant={`${
+                i === 0
+                  ? "border border-primary-color text-primary-color hover:bg-primary-color hover:text-white"
+                  : "bg-primary-color hover:bg-transparent hover:text-primary-color hover:border hover:border-primary-color"
+              }`}
+              key={i}
+            >
+              {val["Link Title"]}
+            </Button>
+          ))}
+      </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={`h-6 w-6 cursor-pointer ${
+            menuOpen ? "open" : ""
+          }`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="#000"
+          onClick={toggleMenu}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+        </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden">
+          <ul className="pt-4 text-base text-gray-700">
+            {primaryNavigation.length > 0 &&
+              primaryNavigation.map((val, i) => (
+                <li key={i}>
+                  <Link
+                    className="block py-2 md:p-4 hover:text-primary-color capitalize"
+                    locale={locale}
+                    href={val.Hyperlink.url}
+                    target={val.Hyperlink.target}
+                  >
+                    {val["Link Title"]}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </div>
+      )}
+    </nav>
+  </div>
   );
 };
 

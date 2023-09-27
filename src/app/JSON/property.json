@@ -1,0 +1,88 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "image": "/images/properties/property-1.jpg",
+        "propertyName": "Luxury Villa",
+        "location": "123 Main Street, Cityville",
+        "favorites": 120,
+        "category": "Villa",
+        "additionalDetails": {
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "area": "2500 sq. ft.",
+          "price": "$1,200,000"
+        }
+      },
+      {
+        "id": 2,
+        "image": "/images/properties/property-2.jpg",
+        "propertyName": "Modern Apartment",
+        "location": "456 Elm Avenue, Townsville",
+        "favorites": 90,
+        "category": "Apartment",
+        "additionalDetails": {
+          "bedrooms": 2,
+          "bathrooms": 2,
+          "area": "1200 sq. ft.",
+          "price": "$600,000"
+        }
+      },
+      {
+        "id": 3,
+        "image": "/images/properties/property-3.jpg",
+        "propertyName": "Cozy Cottage",
+        "location": "789 Oak Road, Countryside",
+        "favorites": 45,
+        "category": "Cottage",
+        "additionalDetails": {
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "area": "1800 sq. ft.",
+          "price": "$400,000"
+        }
+      },{
+        "id": 4,
+        "image": "/images/properties/property-4.jpg",
+        "propertyName": "Beachfront Condo",
+        "location": "321 Ocean Avenue, Beachtown",
+        "favorites": 65,
+        "category": "Condo",
+        "additionalDetails": {
+          "bedrooms": 2,
+          "bathrooms": 2,
+          "area": "1400 sq. ft.",
+          "price": "$800,000"
+        }
+      },
+      {
+        "id": 5,
+        "image": "/images/properties/property-5.jpg",
+        "propertyName": "Mountain Retreat",
+        "location": "543 Pine Trail, Mountain Village",
+        "favorites": 80,
+        "category": "Cabin",
+        "additionalDetails": {
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "area": "2000 sq. ft.",
+          "price": "$750,000"
+        }
+      },
+      {
+        "id": 6,
+        "image": "/images/properties/property-6.jpg",
+        "propertyName": "City View Penthouse",
+        "location": "789 Skyscraper Lane, Metropolis",
+        "favorites": 110,
+        "category": "Penthouse",
+        "additionalDetails": {
+          "bedrooms": 4,
+          "bathrooms": 4,
+          "area": "3000 sq. ft.",
+          "price": "$2,500,000"
+        }
+      }
+    ]
+  }
+  

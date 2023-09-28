@@ -30,3 +30,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.custom-input .auto-complete-clear-button {
+  display: none; 
+}

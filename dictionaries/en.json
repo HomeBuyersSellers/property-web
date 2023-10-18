@@ -36,9 +36,9 @@
                     }
                 },
                 {
-                    "Link Title": "manage properties ",
+                    "Link Title": "list property",
                     "Hyperlink": {
-                        "url": "/manage-properties",
+                        "url": "/list-property",
                         "target": ""
                     }
                 },
@@ -55,13 +55,6 @@
                     "Link Title": "login",
                     "Hyperlink": {
                         "url": "/login",
-                        "target": ""
-                    }
-                },
-                {
-                    "Link Title": "sign up",
-                    "Hyperlink": {
-                        "url": "/sign-up",
                         "target": ""
                     }
                 }

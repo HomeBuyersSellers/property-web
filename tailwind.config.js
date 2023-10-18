@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '0.5': '0.125rem',   
+        '1.5': '0.375rem',   
+        '2.5': '0.625rem',   
+      },
       colors:{
         'primary-color':'#7065f0'
       },

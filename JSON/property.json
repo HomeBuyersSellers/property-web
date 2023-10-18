@@ -2,7 +2,7 @@
     "properties": [
       {
         "id": 1,
-        "image": "/images/properties/property-1.jpg",
+        "image": "/images/properties/property-1.webp",
         "propertyName": "Luxury Villa",
         "location": "123 Main Street, Cityville",
         "favorites": 120,
@@ -16,7 +16,7 @@
       },
       {
         "id": 2,
-        "image": "/images/properties/property-2.jpg",
+        "image": "/images/properties/property-2.webp",
         "propertyName": "Modern Apartment",
         "location": "456 Elm Avenue, Townsville",
         "favorites": 90,
@@ -30,7 +30,7 @@
       },
       {
         "id": 3,
-        "image": "/images/properties/property-3.jpg",
+        "image": "/images/properties/property-3.webp",
         "propertyName": "Cozy Cottage",
         "location": "789 Oak Road, Countryside",
         "favorites": 45,
@@ -43,7 +43,7 @@
         }
       },{
         "id": 4,
-        "image": "/images/properties/property-4.jpg",
+        "image": "/images/properties/property-4.webp",
         "propertyName": "Beachfront Condo",
         "location": "321 Ocean Avenue, Beachtown",
         "favorites": 65,
@@ -57,7 +57,7 @@
       },
       {
         "id": 5,
-        "image": "/images/properties/property-5.jpg",
+        "image": "/images/properties/property-5.webp",
         "propertyName": "Mountain Retreat",
         "location": "543 Pine Trail, Mountain Village",
         "favorites": 80,
@@ -71,7 +71,7 @@
       },
       {
         "id": 6,
-        "image": "/images/properties/property-6.jpg",
+        "image": "/images/properties/property-6.webp",
         "propertyName": "City View Penthouse",
         "location": "789 Skyscraper Lane, Metropolis",
         "favorites": 110,

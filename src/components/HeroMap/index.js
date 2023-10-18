@@ -1,115 +1,165 @@
-import React, { useEffect } from "react";
-import L from "leaflet";
+import React, { useEffect, useState } from "react";
+import { MapContainer, Marker, Popup, useMapEvent, useMapEvents } from "react-leaflet";
+import {
+  GEOAPIFY_MAP_URL,
+  MAP_BASE_URL,
+  MAP_ICON_URL,
+  MAP_RETINA_URL,
+  MapStyles,
+  tileLayerOptions,
+} from "@/utils/constants";
 import "leaflet/dist/leaflet.css";
-import { GeocoderAutocomplete } from "@geoapify/geocoder-autocomplete"; // Import GeocoderAutocomplete
+import L from "leaflet";
+import axios from "axios";
+import { Icon } from "@/utils/Icons";
+import { debounce } from "@/utils/helper";
+
+function SetViewOnClick() {
+  const map = useMapEvent('click', (e) => {
+    map.setView(e.latlng, map.getZoom(), {
+      animate: animateRef.current || false,
+    })
+  })
+  return null
+}
 
 function HeroMap({ longitude, latitude }) {
-  useEffect(() => {
-    const mapContainer = document.getElementById("map");
+  const [position, setPosition] = useState([latitude, longitude ]); 
+  console.log(position)
+  const markerIcon = L.icon({
+    iconUrl: `${MAP_ICON_URL}&apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`,
+    iconSize: [25, 41],
+  });
 
-    if (!mapContainer || mapContainer._leaflet_id) {
-      return; // Map container is already initialized
+  const isRetina = L.Browser.retina;
+  const baseUrl = `${MAP_BASE_URL}?apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
+  const retinaUrl = `${MAP_RETINA_URL}?apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
+
+  const titleLayer = L.tileLayer(
+    isRetina ? retinaUrl : baseUrl,
+    tileLayerOptions
+  );
+  const [searchText, setSearchText] = useState("");
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
+  const [loading, setLoading] = useState(false);
+ 
+  const debouncedFetchGeocodingSuggestions = debounce((inputText) => {
+    setLoading(true);
+    const apiUrl = `${GEOAPIFY_MAP_URL}${inputText}&apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
+  
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        if (response.data.features) {
+          const extractedProperties = response.data.features.map((feature) => {
+            return feature.properties;
+          });
+          setSuggestions(extractedProperties);
+        } else {
+          setSuggestions([]);
+        }
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching suggestions", error);
+        setSuggestions([]);
+        setLoading(false);
+      });
+  }, 1000);
+  
+  const handleInputChange = (e) => {
+    const inputText = e.target.value;
+    setSearchText(inputText);
+  
+    if (inputText) {
+      debouncedFetchGeocodingSuggestions(inputText); 
+    } else {
+      setSuggestions([]);
     }
-
-    // Define map options
-    const mapOptions = {
-      center: [latitude, longitude],
-      zoom: 12,
-      zoomControl: false,
-      clickable: true,
-      draggable: true,
-    };
-
-    // Create the Leaflet map
-    const map = L.map("map", { attributionControl: false }, mapOptions);
-
-    // Use Leaflet's locate method to get the user's location
-    map.locate({ setView: true, watch: true, maxZoom: 50 });
-
-    // Initialize a marker for the user's location
-    let marker;
-
-    map.on("locationfound", function (ev) {
-      if (!marker) {
-        // Create a new marker if it doesn't exist
-        marker = L.marker(ev.latlng).addTo(map);
-      } else {
-        // Update the marker's position if it exists
-        marker.setLatLng(ev.latlng);
-      }
-    });
-
-    // Retina displays require different map tiles quality
-    const isRetina = L.Browser.retina;
-
-    const baseUrl = `https://maps.geoapify.com/v1/tile/osm-bright/{z}/{x}/{y}.png?apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
-    const retinaUrl = `https://maps.geoapify.com/v1/tile/osm-bright/{z}/{x}/{y}@2x.png?apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
-
-    // Add map tiles layer. Set 20 as the maximal zoom and provide map data attribution.
-    L.tileLayer(isRetina ? retinaUrl : baseUrl, {
-      apiKey: process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY,
-      maxZoom: 20,
-      id: "osm-bright",
-    }).addTo(map);
-
-    const markerIcon = L.icon({
-      iconUrl: `https://api.geoapify.com/v1/icon/?type=awesome&color=%232ea2ff&size=large&scaleFactor=2&apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`,
-      iconSize: [38, 56], // size of the icon
-      iconAnchor: [19, 51], // point of the icon which will correspond to marker's location
-      popupAnchor: [0, -60], // point from which the popup should open relative to the iconAnchor
-    });
-
-    const autocompleteInput = new GeocoderAutocomplete(
-      document.getElementById("autocomplete"),
-      process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY
-      // geocode options
-    );
-
-    autocompleteInput.on("select", (location) => {
-      // Add marker with the selected location
-      if (marker) {
-        marker.remove();
-      }
-
-      if (location) {
-        marker = L.marker([location.properties.lat, location.properties.lon], {
-          icon: markerIcon,
-        }).addTo(map);
-
-        map.panTo([location.properties.lat, location.properties.lon]);
-      }
-    });
-  }, [longitude, latitude]);
-
+    setShowSuggestions(!!inputText);
+  };
+  
+  useEffect(()=>{
+    setPosition([latitude,longitude])
+  },[latitude,longitude])
   return (
-    <div>
-      {/* Add a container for the map */}
-      <div id="map" className="relative z-0 h-96 w-full"></div>
-
-      <div className="absolute inset-x-0 bottom-[-60px] z-10 left-1/2 transform -translate-x-1/2 w-full max-w-[800px] px-6 text-black">
-        <div className="bg-white p-6 rounded-md shadow-md">
-          <h2 className="text-gray-700 font-medium font-lg capitalize mb-2">
-            Search Location
-          </h2>
-          <label className="relative block">
-            <span className="sr-only">Search</span>
-            <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-              <i className="ri-search-line h-5 w-5 text-primary-color"></i>
-            </span>
-            <input
-              className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-              id="autocomplete"
-              placeholder="Search for a location"
-              type="text"
-              name="search"
-            />
-          </label>
+    <React.Fragment>
+      <div className="container-fluid relative">
+        <div className="grid grid-cols-1">
+          <div className="w-full  border-0">
+            <div className="relative z-0 w-full h-96 overflow-hidden">
+              <MapContainer            
+                zoom={5}
+                center={position} 
+                scrollWheelZoom={false}
+                attribution={false}
+                attributionControl={false}
+                style={MapStyles}
+                layers={[titleLayer]}
+              >
+                <SetViewOnClick/>
+                <Marker position={position} icon={markerIcon} key="marker">
+                <Popup>You are Here</Popup>
+                </Marker>
+              </MapContainer>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Add overlay */}
-      <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
-    </div>
+      <div className="container relative -mt-[25px] mx-auto">
+        <div className="subscribe-form z-1 mx-3">
+          <form className="relative mx-auto sm:max-w-lg">
+            {Icon.SearchIcon}
+            <input
+              type="text"
+              id="autocomplete"
+              name="name"
+              className="rounded-md bg-white dark:bg-slate-50 shadow dark:shadow-gray-300 ps-12 text-sm"
+              placeholder="City, Address, Zip"
+              value={searchText}
+              onChange={handleInputChange}
+            />
+            <button
+              type="submit"
+              className="btn bg-primary-color hover:bg-opacity-75 text-white rounded-md text-sm font-medium"
+            >
+              Search
+            </button>
+            {showSuggestions && (
+              <div className="absolute w-full bg-white border border-gray-300 shadow-md mt-2 max-h-96 overflow-y-auto z-10 rounded-md">
+                {loading ? ( 
+                  <div className="text-center py-4">
+                    Fetching Data...
+                  </div>
+                ) : suggestions.length > 0 ? (
+                  suggestions.map((suggestion) => (
+                    <div
+                      key={suggestion.place_id}
+                      className="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                      onClick={() => {
+                        setPosition([suggestion.lat, suggestion.lon]);
+                        setShowSuggestions(false);
+                      }}
+                    >
+                      <div className="mr-2 w-10">{Icon.MapPin}</div>
+                      <span className="text-sm font-medium">
+                        {suggestion.formatted}
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  <div className="px-4 py-2 text-base text-gray-500 text-center">
+                    No search results found
+                  </div>
+                )}
+              </div>
+            )}
+            
+          </form>
+        </div>
+      </div>
+    </React.Fragment>
   );
 }
 

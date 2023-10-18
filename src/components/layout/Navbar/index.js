@@ -1,6 +1,6 @@
 import Button from "@/components/common/Button";
+import LoginModal from "@/components/common/Modals/LoginModal";
 import Link from "next-intl/link";
-import Image from "next/image";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
@@ -11,7 +11,7 @@ const Navbar = ({ data }) => {
   const primaryNavigation = data && data.primary_navigation;
   const secondaryNavigation = data && data.secondary_navigation;
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [modal,setModal]=useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -41,7 +41,7 @@ const Navbar = ({ data }) => {
               primaryNavigation.map((val, i) => (
                 <li key={i}>
                   <Link
-                    className="text-gray-700 font-medium py-2 md:p-4 hover:text-primary-color capitalize"
+                    className="text-gray-700 font-regular py-2 md:p-4 hover:text-primary-color capitalize text-sm"
                     locale={locale}
                     href={val.Hyperlink.url}
                     target={val.Hyperlink.target}
@@ -55,12 +55,9 @@ const Navbar = ({ data }) => {
             {secondaryNavigation.length > 0 &&
               secondaryNavigation.map((val, i) => (
                 <Button
-                  variant={`${
-                    i === 0
-                      ? "border border-primary-color text-primary-color hover:bg-primary-color hover:text-white"
-                      : "bg-primary-color hover:bg-transparent hover:text-primary-color hover:border hover:border-primary-color"
-                  }`}
+                  variant="bg-primary-color hover:bg-transparent hover:text-primary-color hover:border hover:border-primary-color text-white text-sm rounded"
                   key={i}
+                  onClick={()=>setModal(true)}
                 >
                   {val["Link Title"]}
                 </Button>
@@ -75,15 +72,12 @@ const Navbar = ({ data }) => {
         {secondaryNavigation.length > 0 &&
           secondaryNavigation.map((val, i) => (
             <Button
-              variant={`${
-                i === 0
-                  ? "border border-primary-color text-primary-color hover:bg-primary-color hover:text-white"
-                  : "bg-primary-color hover:bg-transparent hover:text-primary-color hover:border hover:border-primary-color"
-              }`}
-              key={i}
-            >
-              {val["Link Title"]}
-            </Button>
+                  variant="bg-primary-color hover:bg-transparent hover:text-primary-color hover:border hover:border-primary-color text-white"
+                  key={i}
+                  onClick={()=>setModal(true)}
+                >
+                  {val["Link Title"]}
+                </Button>
           ))}
       </div>
         <svg
@@ -129,6 +123,7 @@ const Navbar = ({ data }) => {
         </div>
       )}
     </nav>
+    {modal && <LoginModal closeModal={()=> setModal(false)}/>}
   </div>
   );
 };

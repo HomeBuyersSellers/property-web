@@ -1,7 +1,8 @@
 "use client"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
+import Loader from "../Loader";
 
 
 const Layout = ({ children, header,footer }) => {
@@ -17,11 +18,14 @@ const Layout = ({ children, header,footer }) => {
 
   return (
     <>
+    <Suspense fallback={<Loader/>}>
       <Navbar data={header} />
-      <main className="flex min-h-screen flex-col items-center justify-between ">
+      <main className="flex min-h-screen flex-col items-center justify-between relative" >
           {children}
       </main>
       <Footer data={footer} />
+    </Suspense>
+     
     </>
   );
 };

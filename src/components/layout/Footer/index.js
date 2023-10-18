@@ -1,7 +1,9 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next-intl/link";
+import { useSelector } from "react-redux";
 
 const Footer = ({ data }) => {
+  const locale = useSelector((state) => state.lang);
   const sellHome = data && data.sellHome;
   const buyRent = data && data.buyRent;
   const buyHome = data && data.buyHome;
@@ -9,7 +11,7 @@ const Footer = ({ data }) => {
   const about = data && data.about;
   const quickLinks = data && data.quickLinks;
   return (
-    <footer className="bg-white text-gray-700 py-6 px-5 shadow-lg">
+    <footer className="bg-gray-50 text-gray-700 py-6 px-5 shadow-lg">
     <div className="container mx-auto flex flex-wrap space-y-4 md:space-y-0">
     <div className="w-full md:w-2/5 flex lg:items-end">
       <Link href="/" className="flex">
@@ -37,10 +39,10 @@ const Footer = ({ data }) => {
               const target = val && val.HyperLink && val.HyperLink.target;
               return (
                 <li key={i}>
-                  <Link
+                  <Link locale={locale}
                     href={link}
                     target={target}
-                    className="text-gray-500 hover:text-primary-color"
+                    className="text-gray-500  text-sm hover:text-primary-color"
                   >
                     {val["Link Title"]}
                   </Link>
@@ -62,9 +64,10 @@ const Footer = ({ data }) => {
               return (
                 <li key={i}>
                   <Link
+                    locale={locale}
                     href={link}
                     target={target}
-                    className="text-gray-500 hover:text-primary-color"
+                    className="text-gray-500 text-sm hover:text-primary-color"
                   >
                     {val["Link Title"]}
                   </Link>
@@ -88,7 +91,7 @@ const Footer = ({ data }) => {
                   <Link
                     href={link}
                     target={target}
-                    className="text-gray-500 hover:text-primary-color"
+                    className="text-gray-500  text-sm hover:text-primary-color"
                   >
                     {val["Link Title"]}
                   </Link>
@@ -114,7 +117,7 @@ const Footer = ({ data }) => {
                   <Link
                     href={link}
                     target={target}
-                    className="text-gray-500 hover:text-primary-color"
+                    className="text-gray-500  text-sm hover:text-primary-color"
                   >
                     {val["Link Title"]}
                   </Link>
@@ -138,7 +141,7 @@ const Footer = ({ data }) => {
                   <Link
                     href={link}
                     target={target}
-                    className="text-gray-500 hover:text-primary-color"
+                    className="text-gray-500  text-sm hover:text-primary-color"
                   >
                     {val["Link Title"]}
                   </Link>
@@ -162,7 +165,7 @@ const Footer = ({ data }) => {
                   <Link
                     href={link}
                     target={target}
-                    className="text-gray-500 hover:text-primary-color"
+                    className="text-gray-500  text-sm hover:text-primary-color"
                   >
                     {val["Link Title"]}
                   </Link>

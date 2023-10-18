@@ -4,7 +4,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 
 async function getProperties() {
   try {
-    const data = await import(`../JSON/property.json`);
+    const data = await import(`/JSON/property.json`);
     return data.default;
   } catch (error) {
     console.error('Error fetching properties:', error);
@@ -22,6 +22,7 @@ export default async function Home({ params: { locale } }) {
   const properties = await fetchData()
   return (
     <>
+
     <HeroBanner/>
     <Grid locale={locale} data={properties} />
     </>

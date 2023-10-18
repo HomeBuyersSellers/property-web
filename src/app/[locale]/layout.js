@@ -3,7 +3,6 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import 'remixicon/fonts/remixicon.css';
 import {
-  useTranslations,
   createTranslator,
   NextIntlClientProvider,
 } from "next-intl";
@@ -35,8 +34,8 @@ export async function generateMetadata({ params: { locale } }) {
 function LocaleLayoutComponent({ children, locale, messages }) {
   return (
     <html lang={locale}>
-      <body suppressHydrationWarning={true}>
-        <ReduxProvider>
+      <body suppressHydrationWarning={true}>  
+      <ReduxProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Layout header={messages.Homepage.header} footer={messages.Homepage.footer}>{children}</Layout>
           </NextIntlClientProvider>

@@ -18,6 +18,9 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins', 'sans'],
       },
+       screens: {
+        'xxl': '1600px', // Define your custom breakpoint
+      },
       backgroundImage: {
         'hero-banner': "url('https://mdbcdn.b-cdn.net/img/new/slides/146.webp')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -4,8 +4,7 @@ import Link from "next-intl/link";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
-const Navbar = ({ data }) => {
-  const locale = useSelector((state) => state.lang);
+const Navbar = ({ data, locale }) => {
   const brandLogoTitle = data && data.brandLogo && data.brandLogo.title;
   const brandLogoImage = data && data.brandLogo && data.brandLogo.logo;
   const primaryNavigation = data && data.primary_navigation;
@@ -18,7 +17,7 @@ const Navbar = ({ data }) => {
 
   return (
     <div className={`sticky shadow-md top-0 bg-white z-20 ${menuOpen ? 'h-screen':''}`}>
-    <nav className="container mx-auto py-4 px-5">
+    <nav className="container mx-auto py-7 px-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Link href="/" locale={locale} className="text-gray-700 hover:text-primary-color font-semibold capitalize flex items-center">
@@ -41,7 +40,7 @@ const Navbar = ({ data }) => {
               primaryNavigation.map((val, i) => (
                 <li key={i}>
                   <Link
-                    className="text-gray-700 font-regular py-2 md:p-4 hover:text-primary-color capitalize text-sm"
+                    className="text-gray-700 font-medium py-2 md:p-4 hover:text-primary-color capitalize text-sm"
                     locale={locale}
                     href={val.Hyperlink.url}
                     target={val.Hyperlink.target}
@@ -110,7 +109,7 @@ const Navbar = ({ data }) => {
               primaryNavigation.map((val, i) => (
                 <li key={i}>
                   <Link
-                    className="block py-2 md:p-4 hover:text-primary-color capitalize"
+                    className="block py-2 md:p-4 hover:text-primary-color capitalize font-medium"
                     locale={locale}
                     href={val.Hyperlink.url}
                     target={val.Hyperlink.target}

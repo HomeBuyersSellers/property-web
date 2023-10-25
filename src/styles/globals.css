@@ -141,3 +141,10 @@ input:focus-visible{
   top: 1.5rem;
   left: 0.5rem;
 }
+.tile-layer-class  { 
+ background-repeat: no-repeat !important;
+ background-size: cover !important;
+}
+.leaflet-container {
+  overflow: unset !important;
+}

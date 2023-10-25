@@ -2,8 +2,7 @@ import React from "react";
 import Link from "next-intl/link";
 import { useSelector } from "react-redux";
 
-const Footer = ({ data }) => {
-  const locale = useSelector((state) => state.lang);
+const Footer = ({ data ,locale }) => {
   const sellHome = data && data.sellHome;
   const buyRent = data && data.buyRent;
   const buyHome = data && data.buyHome;

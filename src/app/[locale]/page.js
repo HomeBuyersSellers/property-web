@@ -19,12 +19,11 @@ export default async function Home({ params: { locale } }) {
     const properties = await getProperties();
     return properties;
   };
-  const properties = await fetchData()
+  const properties = await fetchData();
   return (
     <>
-
-    <HeroBanner/>
-    <Grid locale={locale} data={properties} />
+     <HeroBanner/>
+     <Grid locale={locale} data={properties} />
     </>
     );
 }

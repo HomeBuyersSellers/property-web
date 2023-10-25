@@ -1,10 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next-intl/link";
+import Link from "next/link";
 import { ImagePlaceHolder } from "../Loaders/ImagePlaceHolder";
 import CardLoader from "../Loaders/CardLoader";
-const Grid = ({ data }) => {
+import { useSelector } from "react-redux";
+
+const Grid = ({ data , locale}) => {
   const [loading, setLoading] = useState(false);
+
+  console.log(locale,"locale")
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
@@ -21,7 +25,7 @@ const Grid = ({ data }) => {
               id={val.propertyName.split(" ").join("-")}
               className="my-1 px-1 w-full sm:w-1/2 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 xxl:w-1/4"
             >
-              <Link href="#">
+              <Link href={`${locale}/rent/${val.propertyName.split(" ").join("-").toLowerCase()}`}>
                 <article
                   className={`overflow-hidden rounded-lg shadow-lg bg-white relative  bg-cover bg-no-repeat`}
                 >

@@ -13,6 +13,7 @@ const Layout = ({ children, header,footer }) => {
     const main = document.querySelector("main");
     if (main) {
       main.style.marginTop = `${navbarHeight}px`;
+      main.style.zIndex=-1;
     }
   }, []);
 

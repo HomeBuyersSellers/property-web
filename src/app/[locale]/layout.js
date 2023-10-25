@@ -1,11 +1,8 @@
 import { i18nConfig } from "@/i18n";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import 'remixicon/fonts/remixicon.css';
-import {
-  createTranslator,
-  NextIntlClientProvider,
-} from "next-intl";
+
+import { createTranslator, NextIntlClientProvider } from "next-intl";
 import Layout from "@/components/layout";
 import { ReduxProvider } from "../Redux/provider";
 const { locales } = i18nConfig;
@@ -34,13 +31,18 @@ export async function generateMetadata({ params: { locale } }) {
 function LocaleLayoutComponent({ children, locale, messages }) {
   return (
     <html lang={locale}>
-      <body suppressHydrationWarning={true}>  
       <ReduxProvider>
+        <body suppressHydrationWarning={true}>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <Layout header={messages.Homepage.header} footer={messages.Homepage.footer}>{children}</Layout>
+            <Layout
+              header={messages.Homepage.header}
+              footer={messages.Homepage.footer}
+            >
+              {children}
+            </Layout>
           </NextIntlClientProvider>
-        </ReduxProvider>
-      </body>
+        </body>
+      </ReduxProvider>
     </html>
   );
 }

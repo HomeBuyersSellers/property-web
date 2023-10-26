@@ -6,8 +6,7 @@
     "dev": "node ./UIServer",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "vercel-build": "npm run prepare && next build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.2",

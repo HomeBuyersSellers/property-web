@@ -20,10 +20,9 @@ function HeroMap({ longitude, latitude }) {
   // suggestion markers
   const [suggestionMarkers, setSuggestionMarkers] = useState([]);
   const [suggestionLocations, setSuggestionLocations] = useState([]);
-  console.log(MapStyles,"MapStyles")
   const debouncedFetchGeocodingSuggestions = useDebounce((inputText) => {
     setLoading(true);
-    const apiUrl = `${GEOAPIFY_MAP_URL}${inputText}&apiKey=${process.env.GEOAPIFY_API_KEY}`;
+    const apiUrl = `${GEOAPIFY_MAP_URL}${inputText}&apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
 
     axios
       .get(apiUrl)

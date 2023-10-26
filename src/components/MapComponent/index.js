@@ -20,8 +20,8 @@ const MapView = ({ position, suggestions, suggestionMarkers,mapStyles,createdMap
       });
     
       const isRetina = L.Browser.retina;
-      const baseUrl = `${MAP_BASE_URL}?apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
-      const retinaUrl = `${MAP_RETINA_URL}?apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
+      const baseUrl = `${MAP_BASE_URL}?apiKey=${process.env.GEOAPIFY_API_KEY}`;
+      const retinaUrl = `${MAP_RETINA_URL}?apiKey=${process.env.GEOAPIFY_API_KEY}`;
     
       const titleLayer = L.tileLayer(
         isRetina ? retinaUrl : baseUrl,

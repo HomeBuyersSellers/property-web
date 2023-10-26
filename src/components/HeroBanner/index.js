@@ -1,45 +1,24 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React from "react";
 import HeroMap from "../HeroMap";
+import useCurrentLocation from "@/hooks/useCurrentLocation";
+import Loader from "../Loader";
 const HeroBanner = () => {
-  const [latitude, setLatitude] = useState("");
-  const [longitude, setLongitude] = useState("");
+  const { location, loading, error } = useCurrentLocation();
+  if (loading) {
+    return <Loader/>;
+  }
 
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-    return () => clearTimeout(timeout);
-  }, []);
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
-  useEffect(() => {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          // Handle the position data here
-          const latitude = position.coords.latitude;
-          const longitude = position.coords.longitude;
-          setLatitude(latitude)
-          setLongitude(longitude)
-        },
-        (error) => {
-          // Handle error cases here
-          console.error("Error getting current location:", error.message);
-        }
-      );
-    } else {
-      // Geolocation not available in this browser
-      console.error("Geolocation is not supported by your browser.");
-    }
-  }, []);
-  console.log(latitude,longitude,"COORDINATES")
   return (
     <section className="mb-10 relative h-96 w-full bg-slate-400">
       <div className="bg-cover bg-center bg-no-repeat h-full relative z-0">
         <HeroMap
-          latitude={latitude}
-          longitude={longitude}
+          latitude={location.latitude}
+          longitude={location.longitude}
         />
         {/*
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center w-full max-w-[800px] px-6">

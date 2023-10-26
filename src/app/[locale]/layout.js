@@ -29,20 +29,20 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 function LocaleLayoutComponent({ children, locale, messages }) {
+  console.log(messages, "messages");
+  const header = messages && messages.Homepage && messages.Homepage.header;
+  const footer = messages && messages.Homepage && messages.Homepage.footer;
   return (
     <html lang={locale}>
-      <ReduxProvider>
-        <body suppressHydrationWarning={true}>
+      <body suppressHydrationWarning={true}>
+        <ReduxProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <Layout
-              header={messages.Homepage.header}
-              footer={messages.Homepage.footer}
-            >
+            <Layout header={header} footer={footer}>
               {children}
             </Layout>
           </NextIntlClientProvider>
-        </body>
-      </ReduxProvider>
+        </ReduxProvider>
+      </body>
     </html>
   );
 }

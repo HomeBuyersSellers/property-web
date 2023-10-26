@@ -1,7 +1,7 @@
 const { createMiddleware } = require('next-intl');
 const messages = {
-  en: require('./dictionaries/en.json'), // Replace with the actual paths to your translation files.
-  ar: require('./dictionaries/ar.json'),
+  en: require('/dictionaries/en.json'), // Replace with the actual paths to your translation files.
+  ar: require('/dictionaries/ar.json'),
   // Add translations for other locales as needed.
 };
 

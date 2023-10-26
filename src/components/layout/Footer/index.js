@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next-intl/link";
-import { useSelector } from "react-redux";
 
 const Footer = ({ data ,locale }) => {
   const sellHome = data && data.sellHome;
@@ -9,20 +8,22 @@ const Footer = ({ data ,locale }) => {
   const termsAndPolicy = data && data.termsAndPolicy;
   const about = data && data.about;
   const quickLinks = data && data.quickLinks;
+  const brandLogoTitle = data && data.brandLogo && data.brandLogo.title;
+  const brandLogoImage = data && data.brandLogo && data.brandLogo.logo;
   return (
     <footer className="bg-gray-50 text-gray-700 py-6 px-5 shadow-lg">
     <div className="container mx-auto flex flex-wrap space-y-4 md:space-y-0">
     <div className="w-full md:w-2/5 flex lg:items-end">
       <Link href="/" className="flex">
-        {data.brandLogo.logo ? (
+        {brandLogoImage ? (
           <>
             <i className="ri-community-line text-xl text-primary-color mx-1"></i>
             <h1 className="text-xl font-semibold">
-              {data.brandLogo.title}
+              {brandLogoTitle}
             </h1>
           </>
         ) : (
-          <h1 className="text-2xl font-semibold">{data.brandLogo.title}</h1>
+          <h1 className="text-2xl font-semibold">{brandLogoTitle}</h1>
         )}
       </Link>
     </div>
@@ -32,7 +33,7 @@ const Footer = ({ data ,locale }) => {
           {sellHome.title}
         </h2>
         <ul className="capitalize">
-          {sellHome.links.length > 0 &&
+          {sellHome.links && sellHome.links.length > 0 &&
             sellHome.links.map((val, i) => {
               const link = val && val.Hyperlink && val.Hyperlink.url;
               const target = val && val.HyperLink && val.HyperLink.target;
@@ -56,7 +57,7 @@ const Footer = ({ data ,locale }) => {
           {buyRent.title}
         </h2>
         <ul className="capitalize">
-          {buyRent.links.length > 0 &&
+          {buyRent.links && buyRent.links.length > 0 &&
             buyRent.links.map((val, i) => {
               const link = val && val.Hyperlink && val.Hyperlink.url;
               const target = val && val.HyperLink && val.HyperLink.target;
@@ -81,7 +82,7 @@ const Footer = ({ data ,locale }) => {
           {about.title}
         </h2>
         <ul className="capitalize">
-          {about.links.length > 0 &&
+          {about.links && about.links.length > 0 &&
             about.links.map((val, i) => {
               const link = val && val.Hyperlink && val.Hyperlink.url;
               const target = val && val.HyperLink && val.HyperLink.target;
@@ -107,7 +108,7 @@ const Footer = ({ data ,locale }) => {
           {buyHome.title}
         </h2>
         <ul className="capitalize">
-          {buyHome.links.length > 0 &&
+          {buyHome.links && buyHome.links.length > 0 &&
             buyHome.links.map((val, i) => {
               const link = val && val.Hyperlink && val.Hyperlink.url;
               const target = val && val.HyperLink && val.HyperLink.target;
@@ -131,7 +132,7 @@ const Footer = ({ data ,locale }) => {
           {termsAndPolicy.title}
         </h2>
         <ul className="capitalize">
-          {termsAndPolicy.links.length > 0 &&
+          {termsAndPolicy.links && termsAndPolicy.links.length > 0 &&
             termsAndPolicy.links.map((val, i) => {
               const link = val && val.Hyperlink && val.Hyperlink.url;
               const target = val && val.HyperLink && val.HyperLink.target;
@@ -155,7 +156,7 @@ const Footer = ({ data ,locale }) => {
           {quickLinks.title}
         </h2>
         <ul className="capitalize">
-          {quickLinks.links.length > 0 &&
+          {quickLinks.links && quickLinks.links.length > 0 &&
             quickLinks.links.map((val, i) => {
               const link = val && val.Hyperlink && val.Hyperlink.url;
               const target = val && val.HyperLink && val.HyperLink.target;

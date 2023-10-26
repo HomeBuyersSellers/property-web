@@ -1,63 +1,210 @@
 {
-    "Homepage": {
-      "helloWorld": "مرحبًا بك في العالم!",
-      "header": {
-        "brandLogo": {
-          "title": "ويب العقارات",
-          "logo": {
-            "image": "",
-            "alt": ""
+  "Homepage": {
+    "helloWorld": "مرحبًا بكم في عالم العقارات لدينا!",
+    "pageMeta": {
+      "title": "مرحبًا بك في عالم العقارات لدينا",
+      "description": "اكتشف منزل أحلامك معنا. استكشف مجموعة متنوعة من العقارات، بدءًا من الشقق المريحة إلى العقارات الفاخرة، وابحث عن الشريك المثالي."
+    },
+    "header": {
+      "brandLogo": {
+        "title": "موقع العقار",
+        "logo": {
+          "image": "",
+          "alt": ""
+        }
+      },
+      "primary_navigation": [
+        {
+          "Link Title": "الإيجار",
+          "Hyperlink": {
+            "url": "/rent",
+            "target": ""
           }
         },
-        "primary_navigation": [
+        {
+          "Link Title": "الشراء",
+          "Hyperlink": {
+            "url": "/buy",
+            "target": ""
+          }
+        },
+        {
+          "Link Title": "البيع",
+          "Hyperlink": {
+            "url": "/sell",
+            "target": ""
+          }
+        },
+        {
+          "Link Title": "قائمة العقار",
+          "Hyperlink": {
+            "url": "/list-property",
+            "target": ""
+          }
+        },
+        {
+          "Link Title": "حجز الراكب",
+          "Hyperlink": {
+            "url": "/book-rider",
+            "target": ""
+          }
+        }
+      ],
+      "secondary_navigation": [
+        {
+          "Link Title": "تسجيل الدخول",
+          "Hyperlink": {
+            "url": "/login",
+            "target": ""
+          }
+        }
+      ]
+    },
+    "footer": {
+      "brandLogo": {
+        "title": "موقع العقار",
+        "logo": {
+          "image": "",
+          "alt": ""
+        }
+      },
+      "sellHome": {
+        "title": "بيع منزلك",
+        "links": [
           {
-            "Link Title": "الإيجار",
+            "Link Title": "طلب عرض",
             "Hyperlink": {
-              "url": "/الإيجار",
+              "url": "/request-offer",
               "target": ""
             }
           },
           {
-            "Link Title": "الشراء",
+            "Link Title": "الأسعار",
             "Hyperlink": {
-              "url": "/الشراء",
+              "url": "/pricing",
               "target": ""
             }
           },
           {
-            "Link Title": "البيع",
+            "Link Title": "المراجعات",
             "Hyperlink": {
-              "url": "/البيع",
-              "target": ""
-            }
-          },
-          {
-            "Link Title": "الإيجار",
-            "Hyperlink": {
-              "url": "/الإيجار",
-              "target": ""
-            }
-          },
-          {
-            "Link Title": "إدارة العقارات",
-            "Hyperlink": {
-              "url": "/إدارة-العقارات",
+              "url": "/reviews",
               "target": ""
             }
           }
-        ],
-        "secondary_navigation": [
+        ]
+      },
+      "buyRent": {
+        "title": "الشراء، الإيجار والبيع",
+        "links": [
           {
-            "Link Title": "تسجيل الدخول",
+            "Link Title": "شراء وبيع العقارات",
             "Hyperlink": {
-              "url": "/تسجيل-الدخول",
+              "url": "/buy-sell-properties",
               "target": ""
             }
           },
           {
-            "Link Title": "سجل",
+            "Link Title": "إيجار منزل",
             "Hyperlink": {
-              "url": "/سجل",
+              "url": "/rent-home",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "التجارة مع المطور",
+            "Hyperlink": {
+              "url": "/builder-trade-up",
+              "target": ""
+            }
+          }
+        ]
+      },
+      "buyHome": {
+        "title": "شراء منزل",
+        "links": [
+          {
+            "Link Title": "شراء وبيع العقارات",
+            "Hyperlink": {
+              "url": "/buy-home",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "التمويل",
+            "Hyperlink": {
+              "url": "/home-finance",
+              "target": ""
+            }
+          }
+        ]
+      },
+      "termsAndPolicy": {
+        "title": "الشروط والسياسة",
+        "links": [
+          {
+            "Link Title": "الثقة والأمان",
+            "Hyperlink": {
+              "url": "/trust-safety",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "شروط الخدمة",
+            "Hyperlink": {
+              "url": "/terms-of-service",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "سياسة الخصوصية",
+            "Hyperlink": {
+              "url": "/privacy-policy",
+              "target": ""
+            }
+          }
+        ]
+      },
+      "about": {
+        "title": "عنا",
+        "links": [
+          {
+            "Link Title": "الشركة",
+            "Hyperlink": {
+              "url": "/company",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "كيفية العمل",
+            "Hyperlink": {
+              "url": "/how-it-works",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "اتصل بنا",
+            "Hyperlink": {
+              "url": "/contact-us",
+              "target": ""
+            }
+          }
+        ]
+      },
+      "quickLinks": {
+        "title": "روابط سريعة",
+        "links": [
+          {
+            "Link Title": "الأسئلة الشائعة",
+            "Hyperlink": {
+              "url": "/faq",
+              "target": ""
+            }
+          },
+          {
+            "Link Title": "مركز المساعدة",
+            "Hyperlink": {
+              "url": "/help-center",
               "target": ""
             }
           }
@@ -65,4 +212,4 @@
       }
     }
   }
-  
+}

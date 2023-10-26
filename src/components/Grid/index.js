@@ -3,12 +3,13 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ImagePlaceHolder } from "../Loaders/ImagePlaceHolder";
 import CardLoader from "../Loaders/CardLoader";
-import { useSelector } from "react-redux";
+// import Image from "next/image";
 
-const Grid = ({ data , locale}) => {
+const Grid = ({ data,locale }) => {
   const [loading, setLoading] = useState(false);
+  console.log(locale,"Locale")
 
-  console.log(locale,"locale")
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
@@ -19,13 +20,16 @@ const Grid = ({ data , locale}) => {
     <div className="xl:container lg:container my-12 mx-auto py-4 px-5 lg:px-2 z-[-1]">
       <div className="flex flex-wrap sm-mx-1  relative m-0">
         {data.properties.length > 0 &&
-          data.properties.map((val) => (
+          data.properties.map((val,i) => (
             <div
-              key={val.propertyName}
+              property-type={val.propertyType}
+              key={i}
               id={val.propertyName.split(" ").join("-")}
               className="my-1 px-1 w-full sm:w-1/2 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 xxl:w-1/4"
             >
-              <Link href={`${locale}/rent/${val.propertyName.split(" ").join("-").toLowerCase()}`}>
+              <Link
+                 locale={locale}
+                 href={`/rent/${val.propertyName.split(" ").join("-").toLowerCase()}`}>
                 <article
                   className={`overflow-hidden rounded-lg shadow-lg bg-white relative  bg-cover bg-no-repeat`}
                 >
@@ -35,8 +39,11 @@ const Grid = ({ data , locale}) => {
                     <div className="image-box relative overflow-hidden md:w-full">
                       <img
                         alt="Placeholder"
-                        className="h-[240px] w-full block transition duration-500 scale-100 hover:scale-110"
+                        className="h-[245px] w-full block transition duration-500 scale-100 hover:scale-110"
                         src={val.image}
+                        // quality={100}
+                        layout="responsive"
+                        onLoad={()=><ImagePlaceHolder/>}
                       />
                     </div>
                   )}

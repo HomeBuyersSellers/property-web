@@ -51,7 +51,7 @@ const OTPScreen = ({ sentTo }) => {
       </p>
       <div class="flex  items-center justify-center mx-auto w-full max-w-xs space-x-3">
         {otp.map((digit, index) => (
-          <div class="w-10 h-10 ">
+          <div class="w-10 h-10 " key={index}>
             <input
               key={index}
               className="w-full h-full flex flex-col items-center justify-center text-center  outline-none rounded-md border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-primary-color"
@@ -70,7 +70,7 @@ const OTPScreen = ({ sentTo }) => {
           </p>
         )}
         <p className="mb-1 text-sm text-center font-medium">
-          Didn't receive code?{" "}
+          Didn't receive code?
           <span
             className="cursor-pointer text-primary-color"
             onClick={resetTimer}

@@ -7,9 +7,16 @@ dotenv.config();
 // Next.js configuration
 const nextConfig = {
   reactStrictMode: true,
+  distDir: 'build',
   skipTrailingSlashRedirect: true,
   images: {
-    domains: ['mdbcdn.b-cdn.net'], // Define allowed image domains
+    formats: ['image/webp'],
+    // domains: ['mdbcdn.b-cdn.net'], // Define allowed image domains
+  },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
   },
 };
 

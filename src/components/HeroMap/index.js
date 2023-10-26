@@ -1,56 +1,26 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import {
-  MapContainer,
-  Marker,
-  Popup,
-  useMapEvent,
-  useMapEvents,
-} from "react-leaflet";
-import {
-  GEOAPIFY_MAP_URL,
-  MAP_BASE_URL,
-  MAP_ICON_URL,
-  MAP_RETINA_URL,
-  MapStyles,
-  tileLayerOptions,
-} from "@/utils/constants";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
 import axios from "axios";
 import { Icon } from "@/utils/Icons";
 import { useDebounce } from "@/utils/helper";
+import dynamic from "next/dynamic";
+
+import { GEOAPIFY_MAP_URL, MapStyles } from "@/utils/constants";
+const DynamicMap = dynamic(() => import('../MapComponent'), {
+  ssr: false,
+})
 
 function HeroMap({ longitude, latitude }) {
   const [position, setPosition] = useState(() => [latitude, longitude]);
-  console.log(position);
   // current marker
-  const markerIcon = L.icon({
-    iconUrl: "/images/current-location.svg",
-    iconSize: [25, 41],
-  });
-// suggestion marker
-  const suggestionIcon = L.icon({
-    iconUrl: "/images/pin-location.svg",
-    iconSize: [25, 41],
-  });
-
-  const isRetina = L.Browser.retina;
-  const baseUrl = `${MAP_BASE_URL}?apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
-  const retinaUrl = `${MAP_RETINA_URL}?apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
-
-  const titleLayer = L.tileLayer(
-    isRetina ? retinaUrl : baseUrl,
-    tileLayerOptions
-  );
   const [searchText, setSearchText] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [map, setMap] = useState(null);
-  const [destination,setDestination] =useState(null);
   // suggestion markers
   const [suggestionMarkers, setSuggestionMarkers] = useState([]);
   const [suggestionLocations, setSuggestionLocations] = useState([]);
+  console.log(MapStyles,"MapStyles")
   const debouncedFetchGeocodingSuggestions = useDebounce((inputText) => {
     setLoading(true);
     const apiUrl = `${GEOAPIFY_MAP_URL}${inputText}&apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_API_KEY}`;
@@ -79,7 +49,7 @@ function HeroMap({ longitude, latitude }) {
 
   const handleInputChange = (e) => {
     const inputText = e.target.value;
-    console.log(inputText)
+   
     setSearchText(inputText);
     setShowSuggestions(!!inputText);
 
@@ -100,37 +70,7 @@ function HeroMap({ longitude, latitude }) {
       setSuggestions([]);
     }
   };
-  const MapView = useMemo(
-    () => (
-      <MapContainer
-        zoom={5}
-        center={position}
-        scrollWheelZoom={false}
-        attribution={false}
-        attributionControl={false}
-        style={MapStyles}
-        layers={[titleLayer]}
-        whenCreated={setMap}
-        ref={setMap}
-      >
-        <Marker position={position} icon={markerIcon} key="marker">
-          <Popup>You are Here</Popup>
-        </Marker>
-        {suggestions.map((suggestionMarker, index) => {
-          return(
-            <Marker
-              key={index}
-              position={{ lat: suggestionMarker.lat, lng: suggestionMarker.lon }}
-              icon={suggestionIcon}
-            >
-              <Popup>{suggestionMarker.formatted}</Popup>
-            </Marker>
-          )
-        })}
-      </MapContainer>
-    ),
-    [position, suggestions,suggestionMarkers]
-  );
+
   const handleMapMove = (map) => {};
 
   const handleMapChange = useCallback(
@@ -144,9 +84,6 @@ function HeroMap({ longitude, latitude }) {
   );
 
   const handleSuggestionClick = (suggestion) => {
-    console.log("Destination Clicked :",suggestion)
-    setDestination(suggestion);
-
     handleMapChange(suggestion.lat, suggestion.lon);
     setShowSuggestions(false)
   };
@@ -168,7 +105,14 @@ function HeroMap({ longitude, latitude }) {
         <div className="grid grid-cols-1">
           <div className="w-full  border-0">
             <div className="relative z-0 w-full h-96 overflow-hidden">
-              {MapView}
+              <DynamicMap
+               position={position} 
+               suggestions={suggestions}
+               suggestionMarkers={suggestionMarkers} 
+               mapStyles={MapStyles.heroBanner}
+               mapRef={setMap}
+               createdMap={setMap}
+               />
             </div>
           </div>
         </div>
@@ -187,7 +131,7 @@ function HeroMap({ longitude, latitude }) {
               onChange={handleInputChange}
             />
             <button
-              type="submit"
+              type="button"
               className="btn bg-primary-color hover:bg-opacity-85 text-white rounded-md text-sm font-medium"
             >
               Search

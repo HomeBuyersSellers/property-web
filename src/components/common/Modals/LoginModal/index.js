@@ -4,7 +4,7 @@ import Input from "../../Input";
 import { useState } from "react";
 import CustomSelect from "../../CustomSelect";
 import { fetchCountriesData } from "@/utils/countriesData";
-import { auth, signInWithFacebook, signInWithGoogle } from "@/utils/firebase";
+// import { auth, signInWithFacebook, signInWithGoogle } from "@/utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { saveUser, setLoading } from "@/app/Redux/Features/authSlice";
 import OTPScreen from "@/components/OTPScreen";
@@ -29,24 +29,25 @@ const LoginModal = ({ closeModal }) => {
       });
   }, []);
   const handleGoogleSignIn = async () => {
-    dispatch(setLoading(true));
-    await signInWithGoogle();
-    dispatch(setLoading(false));
+    // dispatch(setLoading(true));
+    // await signInWithGoogle();
+    // dispatch(setLoading(false));
     
-    // After successful Google sign-in, you can perform the user data dispatch here.
-    const user = auth.currentUser; // Get the authenticated user
-    if (user) {
-      const userData = {
-        uid: user.uid,
-        accessToken: user.UserImpl.accessToken,
-        userName: user.UserImpl.displayName,
-        email: user.UserImpl.email,
-        phone: user.UserImpl.phone,
-        profile: user.UserImpl.photoURL,
-        lastLogin: new Date(),
-      };
-      dispatch(saveUser(userData));
-    }
+    // // After successful Google sign-in, you can perform the user data dispatch here.
+    // const user = auth.currentUser; // Get the authenticated user
+    // if (user) {
+    //   const userData = {
+    //     uid: user.uid,
+    //     accessToken: user.UserImpl.accessToken,
+    //     userName: user.UserImpl.displayName,
+    //     email: user.UserImpl.email,
+    //     phone: user.UserImpl.phone,
+    //     profile: user.UserImpl.photoURL,
+    //     lastLogin: new Date(),
+    //   };
+    //   dispatch(saveUser(userData));
+    // }
+    console.log("google Sign In")
   };
   useEffect(() => {
     const option = [];

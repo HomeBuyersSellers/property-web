@@ -15,8 +15,8 @@ const Layout = ({ children, header, footer }) => {
     const main = document.querySelector("main");
     if (main) {
       main.style.marginTop = `${navbarHeight}px`;
-      main.style.marginBottom=`${footerHeight}px`
       main.style.zIndex = 2;
+      // main.style.marginBottom=`${footerHeight}px`
     }
   }, []);
 

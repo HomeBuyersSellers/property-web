@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "node ./UIServer",
-    "build": "npm run clean-build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "clean-build": "rimraf ./.next && next build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.2",

@@ -44,14 +44,14 @@ const OTPScreen = ({ sentTo }) => {
     }
   };
   return (
-    <div class="flex flex-col space-y-4 mb-2">
+    <div className="flex flex-col space-y-4 mb-2">
       <p className="text-sm text-center font-medium">
         Please enter code sent to{" "}
         <span className="text-primary-color">{sentTo}</span>
       </p>
-      <div class="flex  items-center justify-center mx-auto w-full max-w-xs space-x-3">
+      <div className="flex  items-center justify-center mx-auto w-full max-w-xs space-x-3">
         {otp.map((digit, index) => (
-          <div class="w-10 h-10 " key={index}>
+          <div className="w-10 h-10 " key={index}>
             <input
               key={index}
               className="w-full h-full flex flex-col items-center justify-center text-center  outline-none rounded-md border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-primary-color"

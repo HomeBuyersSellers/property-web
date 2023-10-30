@@ -5,11 +5,9 @@ import { ImagePlaceHolder } from "../Loaders/ImagePlaceHolder";
 import CardLoader from "../Loaders/CardLoader";
 // import Image from "next/image";
 
-const Grid = ({ data,locale }) => {
+const Grid = ({ data, locale }) => {
+ 
   const [loading, setLoading] = useState(false);
-  console.log(locale,"Locale")
-
-
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
@@ -28,8 +26,9 @@ const Grid = ({ data,locale }) => {
               className="my-1 px-1 w-full sm:w-1/2 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 xxl:w-1/4"
             >
               <Link
-                 locale={locale}
-                 href={`/rent/${val.propertyName.split(" ").join("-").toLowerCase()}`}>
+                href={`/[locale]/[propertyType]/[propertySlug]`}
+                as={`/${locale}/${val.propertyType.toLowerCase()}/${val.propertyName.split(' ').join('-').toLowerCase()}`}
+                 >
                 <article
                   className={`overflow-hidden rounded-lg shadow-lg bg-white relative  bg-cover bg-no-repeat`}
                 >
@@ -58,7 +57,7 @@ const Grid = ({ data,locale }) => {
                           </div>
                         </div>
                         <h1 className="text-lg text-primary-color font-medium">
-                          {val.additionalDetails.price}{" "}
+                          {val.additionalDetails.price}
                           <span className="text-neutral-400 text-sm">
                             /month
                           </span>

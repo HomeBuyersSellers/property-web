@@ -1,24 +1,18 @@
 "use client"
-import React from "react";
+import React, { useEffect } from "react";
 import HeroMap from "../HeroMap";
-import useCurrentLocation from "@/hooks/useCurrentLocation";
 import Loader from "../Loader";
+import useCurrentLocation from "@/hooks/useCurrentLocation";
+import { useSelector } from "react-redux";
 const HeroBanner = () => {
-  const { location, loading, error } = useCurrentLocation();
-  if (loading) {
-    return <Loader/>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
+  const {location}= useSelector((state)=>state.currentLocation);
+  useCurrentLocation();
   return (
     <section className="mb-10 relative h-96 w-full bg-slate-400">
       <div className="bg-cover bg-center bg-no-repeat h-full relative z-0">
         <HeroMap
-          latitude={location.latitude}
-          longitude={location.longitude}
+          latitude={location && location.latitude}
+          longitude={location && location.longitude}
         />
         {/*
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center w-full max-w-[800px] px-6">

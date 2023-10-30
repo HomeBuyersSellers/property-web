@@ -9,6 +9,11 @@ const nextConfig = {
   reactStrictMode: true,
   distDir: 'build',
   skipTrailingSlashRedirect: true,
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+  },
   images: {
     formats: ['image/webp'],
     // domains: ['mdbcdn.b-cdn.net'], // Define allowed image domains

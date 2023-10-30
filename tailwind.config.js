@@ -13,7 +13,11 @@ module.exports = {
         '2.5': '0.625rem',   
       },
       colors:{
-        'primary-color':'#7065f0'
+        'primary-color':'#7065f0',
+        'light-gray-color':'#F0EFFB',
+        'black-light-color':'#100A55',
+        'gray-light-color':'#585388',
+        'light-gray':'#F7F7FD'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans'],

@@ -14,7 +14,6 @@ async function getProperties() {
 
 export default async function Home({ params: { locale } }) {
   unstable_setRequestLocale(locale);
-
   const fetchData = async () => {
     const properties = await getProperties();
     return properties;

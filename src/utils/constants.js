@@ -14,6 +14,10 @@ export const MapStyles = {
     width: "100%",
     height: "100%",
   },
+  propertyDetailedMap: {
+    width: "100%",
+    height: "300px",
+  },
 };
 
 export const tileLayerOptions = {

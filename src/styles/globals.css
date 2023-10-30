@@ -9,14 +9,17 @@
   --primary-color:#f1f1f1 ;
   --secondary-color: #7065f0;
 }
-
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 body {
   color: rgb(var(--foreground-rgb));
-  background: var(--light-bg);
     font-family: 'poppins';
     font-weight: 400;
     position: relative;
-    z-index:0;
     /* user-select: none; */
 }
 
@@ -132,7 +135,6 @@ input:focus-visible{
 .grid-cols-1 {
   grid-template-columns: repeat(1,minmax(0,1fr))!important;
 }
-
 .scrollbar-options{
   max-height: 200px;
   overflow-y: auto;
@@ -147,4 +149,16 @@ input:focus-visible{
 }
 .leaflet-container {
   overflow: unset !important;
+}
+.gray-light-color{
+  color:#585388;
+}
+.black-light-color{
+  color:#100A55;
+}
+.bg-light-gray-color{
+  background-color: #F7F7FD;
+}
+.border-light-gray{
+  border: 2px solid #E0DEF7;
 }

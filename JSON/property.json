@@ -3,152 +3,1165 @@
     {
       "id": 1,
       "image": "/images/properties/property-1.webp",
+      "imageGallery":["/images/properties/property-1.webp","/images/properties/property-2.webp","/images/properties/property-3.webp","/images/properties/property-4.webp"],
       "propertyName": "Luxury Villa",
-      "location": "123 Main Street, Cityville",
+      "location": "123 Main Street, City valley",
       "favorites": 120,
       "category": "Villa",
+      "locationCoordinates":[73.64219, 91.82956],
       "propertyType": "Rent",
       "additionalDetails": {
         "bedrooms": 4,
         "bathrooms": 3,
         "area": "2500 sq. ft.",
-        "price": "$1,200,000"
-      }
+        "price": "$1,200,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     },
     {
       "id": 2,
       "image": "/images/properties/property-2.webp",
+      "imageGallery":["/images/properties/property-1.webp","/images/properties/property-2.webp","/images/properties/property-3.webp","/images/properties/property-4.webp"],
       "propertyName": "Modern Apartment",
       "location": "456 Elm Avenue, Townsville",
       "favorites": 90,
       "category": "Apartment",
+      "locationCoordinates":[12.96241, 23.89053],
       "propertyType": "Buy",
       "additionalDetails": {
         "bedrooms": 2,
         "bathrooms": 2,
         "area": "1200 sq. ft.",
-        "price": "$600,000"
-      }
+        "price": "$600,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     },
     {
       "id": 3,
       "image": "/images/properties/property-3.webp",
+      "imageGallery":["/images/properties/property-1.webp","/images/properties/property-2.webp","/images/properties/property-3.webp","/images/properties/property-4.webp"],
       "propertyName": "Cozy Cottage",
       "location": "789 Oak Road, Countryside",
       "favorites": 45,
       "category": "Cottage",
+      "locationCoordinates":[-6.99248, 109.15435],
       "propertyType": "Sell",
       "additionalDetails": {
         "bedrooms": 3,
         "bathrooms": 2,
         "area": "1800 sq. ft.",
-        "price": "$400,000"
-      }
+        "price": "$400,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     },
     {
       "id": 4,
       "image": "/images/properties/property-4.webp",
+      "imageGallery":["/images/properties/property-4.webp","/images/properties/property-4.webp","/images/properties/property-4.webp","/images/properties/property-4.webp"],
       "propertyName": "Beachfront Condo",
-      "location": "321 Ocean Avenue, Beachtown",
+      "location": "321 Ocean Avenue, Beach town",
       "favorites": 65,
       "category": "Condo",
+      "locationCoordinates":[73.64219, 91.82956],
       "propertyType": "Sell",
       "additionalDetails": {
         "bedrooms": 2,
         "bathrooms": 2,
         "area": "1400 sq. ft.",
-        "price": "$800,000"
-      }
+        "price": "$800,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     },
     {
       "id": 5,
       "image": "/images/properties/property-5.webp",
+      "imageGallery":["/images/properties/property-5.webp","/images/properties/property-5.webp","/images/properties/property-5.webp","/images/properties/property-5.webp"],
       "propertyName": "Mountain Retreat",
       "location": "543 Pine Trail, Mountain Village",
       "favorites": 80,
       "category": "Cabin",
+      "locationCoordinates":[73.64219, 91.82956],
       "propertyType": "Buy",
       "additionalDetails": {
         "bedrooms": 3,
         "bathrooms": 2,
         "area": "2000 sq. ft.",
-        "price": "$750,000"
-      }
+        "price": "$750,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     },
     {
       "id": 6,
       "image": "/images/properties/property-6.webp",
+      "imageGallery":["/images/properties/property-6.webp","/images/properties/property-6.webp","/images/properties/property-6.webp","/images/properties/property-6.webp"],
       "propertyName": "City View Penthouse",
       "location": "789 Skyscraper Lane, Metropolis",
       "favorites": 110,
       "category": "Penthouse",
+      "locationCoordinates":[73.64219, 91.82956],
       "propertyType": "Rent",
       "additionalDetails": {
         "bedrooms": 4,
         "bathrooms": 4,
         "area": "3000 sq. ft.",
-        "price": "$2,500,000"
-      }
+        "price": "$2,500,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     },
     {
       "id": 7,
       "image": "/images/properties/property-1.webp",
+      "imageGallery":["/images/properties/property-1.webp","/images/properties/property-2.webp","/images/properties/property-3.webp","/images/properties/property-4.webp"],
       "propertyName": "Seaside Bungalow",
       "location": "987 Beach Road, Coastal Town",
       "favorites": 75,
       "category": "Bungalow",
+      "locationCoordinates":[73.64219, 91.82956],
       "propertyType": "Sell",
       "additionalDetails": {
         "bedrooms": 2,
         "bathrooms": 2,
         "area": "1200 sq. ft.",
-        "price": "$600,000"
-      }
+        "price": "$600,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     },
     {
       "id": 8,
       "image": "/images/properties/property-2.webp",
+      "imageGallery":["/images/properties/property-1.webp","/images/properties/property-2.webp","/images/properties/property-3.webp","/images/properties/property-4.webp"],
+
       "propertyName": "Country Farmhouse",
       "location": "456 Farm Lane, Countryside",
       "favorites": 55,
       "category": "Farmhouse",
+      "locationCoordinates":[73.64219, 91.82956],
       "propertyType": "Rent",
       "additionalDetails": {
         "bedrooms": 5,
         "bathrooms": 3,
         "area": "3500 sq. ft.",
-        "price": "$1,800,000"
-      }
+        "price": "$1,800,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     },
     {
       "id": 9,
       "image": "/images/properties/property-3.webp",
+      "imageGallery":["/images/properties/property-1.webp","/images/properties/property-2.webp","/images/properties/property-3.webp","/images/properties/property-4.webp"],
+
       "propertyName": "Downtown Loft",
       "location": "789 Urban Street, Downtown",
       "favorites": 60,
       "category": "Loft",
+      "locationCoordinates":[73.64219, 91.82956],
       "propertyType": "Buy",
       "additionalDetails": {
         "bedrooms": 1,
         "bathrooms": 1,
         "area": "800 sq. ft.",
-        "price": "$400,000"
-      }
+        "price": "$400,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     },
     {
       "id": 10,
       "image": "/images/properties/property-4.webp",
+      "imageGallery":["/images/properties/property-1.webp","/images/properties/property-2.webp","/images/properties/property-3.webp","/images/properties/property-4.webp"],
+
       "propertyName": "Lakefront Cabin",
       "location": "543 Lakeside Road, Lakeside Village",
       "favorites": 70,
       "category": "Cabin",
+      "locationCoordinates":[73.64219, 91.82956],
       "propertyType": "Sell",
       "additionalDetails": {
         "bedrooms": 3,
         "bathrooms": 2,
         "area": "1800 sq. ft.",
-        "price": "$700,000"
-      }
+        "price": "$700,000",
+        "status": "active",
+        "repairQuality":"Modern Loft"
+      },
+      "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+      "listedBy": {
+        "img": "/images/user-avtar.svg",
+        "name": "Diana Richards",
+        "designation": "Rich Capital Properties LLC"
+      },
+      "RentalFeature": [
+        { "key": "Listed on Property web", "value": "1 Week" },
+        { "key": "Date available", "value": "Available now" },
+        { "key": "Type", "value": "Home" },
+        { "key": "Laundry", "value": "In unit" },
+        { "key": "Cooling", "value": "Air Conditioner" },
+        { "key": "Heating", "value": "Forced Air" },
+        { "key": "City", "value": "Houston" },
+        { "key": "Year Built", "value": "2018" },
+        { "key": "Size", "value": "2,173 sqft" },
+        { "key": "Low Size", "value": "9,060 sqft" },
+        { "key": "Parking Area", "value": "Yes" },
+        { "key": "Deposit & Fees", "value": "$2,700" }
+      ],
+      "RentPriceHistoryAndBeverlySpringfield": [
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,600",
+          "event": "Price Change",
+          "source": "Property web"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,000",
+          "event": "Rented",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Black Friday",
+          "source": "Public Records"
+        },
+        {
+          "date": "28/12/2021",
+          "price": "2,700",
+          "event": "Listed for Sale",
+          "source": "Property web"
+        }
+      ],
+      "termsPolicy": "You agree on Property web's Terms of use & privacy policy.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "similarListing": [
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        },
+        {
+          "image": "",
+          "price": "4,550",
+          "isFavorite": true,
+          "name": "Faulker Ave",
+          "address": "909 Woodland St. Michigan, IN",
+          "additionalDetails": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "area": "2500 sq. ft.",
+            "price": "$1,200,000",
+            "status": "active"
+          }
+        }
+      ]
     }
   ]
 }

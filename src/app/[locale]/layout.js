@@ -29,7 +29,6 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 function LocaleLayoutComponent({ children, locale, messages }) {
-  console.log(messages, "messages");
   const header = messages && messages.Homepage && messages.Homepage.header;
   const footer = messages && messages.Homepage && messages.Homepage.footer;
   return (

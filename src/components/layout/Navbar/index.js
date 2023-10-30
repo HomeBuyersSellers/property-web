@@ -1,8 +1,8 @@
 import Button from "@/components/common/Button";
 import LoginModal from "@/components/common/Modals/LoginModal";
+import cleanPathname from "@/utils/helper";
 import Link from "next-intl/link";
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 
 const Navbar = ({ data, locale }) => {
   const brandLogoTitle = data && data.brandLogo && data.brandLogo.title;
@@ -11,17 +11,17 @@ const Navbar = ({ data, locale }) => {
   const secondaryNavigation = data && data.secondary_navigation;
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal,setModal]=useState(false);
+  const url = window.location.pathname;
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <div className={`sticky shadow-md top-0 bg-white z-20 ${menuOpen ? 'h-screen':''}`}>
+    <header className={`fixed left-0 right-0 shadow-md top-0 bg-white z-20 ${menuOpen ? 'h-screen':''}`} id="navbar">
     <nav className="container mx-auto py-7 px-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Link href="/" locale={locale} className="text-gray-700 hover:text-primary-color font-semibold capitalize flex items-center">
-           
               {brandLogoImage ? (
                 <>
                   <i className="ri-community-line text-xl text-primary-color mx-1"></i>
@@ -40,7 +40,7 @@ const Navbar = ({ data, locale }) => {
               primaryNavigation.map((val, i) => (
                 <li key={i}>
                   <Link
-                    className="text-gray-700 font-medium py-2 md:p-4 hover:text-primary-color capitalize text-sm"
+                    className={`text-gray-700 font-medium py-2 md:p-4 hover:text-primary-color capitalize text-sm`}
                     locale={locale}
                     href={val.Hyperlink.url}
                     target={val.Hyperlink.target}
@@ -123,7 +123,7 @@ const Navbar = ({ data, locale }) => {
       )}
     </nav>
     {modal && <LoginModal closeModal={()=> setModal(false)}/>}
-  </div>
+  </header>
   );
 };
 

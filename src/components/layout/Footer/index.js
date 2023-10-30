@@ -11,7 +11,7 @@ const Footer = ({ data ,locale }) => {
   const brandLogoTitle = data && data.brandLogo && data.brandLogo.title;
   const brandLogoImage = data && data.brandLogo && data.brandLogo.logo;
   return (
-    <footer className="bg-gray-50 text-gray-700 py-6 px-5 shadow-lg">
+    <footer className="bg-gray-50 text-gray-700 py-6 px-5 shadow-lg  w-full" id="footer">
     <div className="container mx-auto flex flex-wrap space-y-4 md:space-y-0">
     <div className="w-full md:w-2/5 flex lg:items-end">
       <Link href="/" className="flex">
@@ -52,7 +52,7 @@ const Footer = ({ data ,locale }) => {
         </ul>
       </div>
   
-      <div className="w-full md:w-1/2 lg:w-1/3 mt-4 ">
+      <div className="w-full md:w-full lg:w-1/3 mt-4 ">
         <h2 className="text-lg font-medium mb-2 uppercase">
           {buyRent.title}
         </h2>
